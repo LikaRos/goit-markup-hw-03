@@ -15,6 +15,7 @@ EEEEEE белый --*/
   --accent-text-color-black: #000000;
   --background-color: #2f303a;
   --button-background: #f5f4fa;
+  --border-color: #eee;
   --indent: 30px;
   --items: 4;
 }
@@ -293,7 +294,7 @@ body {
 
   display: flex;
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 16px;
 }
 .menu-item {
   margin-left: 8px;
@@ -328,6 +329,11 @@ body {
 .works-item {
   flex-basis: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
+  margin-top: 30px;
+  border-bottom: 2px var(--border-color) solid;
+  border-left: 1px var(--border-color) solid;
+  border-right: 1px var(--border-color) solid;
+  margin-top: 30px;
 }
 
 .works-item:nth-child(3n) {
