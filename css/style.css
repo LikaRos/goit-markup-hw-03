@@ -1,0 +1,364 @@
+/*--Цвета текстов
+212121 черный h3 
+F5F4FA белый
+757575 серый p
+000000 черный
+2196F3 голубой акцент
+FFFFFF белый кнопки на стр портфолио и Hero
+EEEEEE белый --*/
+
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-text-color-blue: #2196f3;
+  --white-text-color: #ffffff;
+  --accent-text-color-black: #000000;
+  --background-color: #2f303a;
+  --button-background: #f5f4fa;
+  --indent: 30px;
+  --items: 4;
+}
+
+/* Применить ко всему документу если нет  normalize
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px red solid;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  line-height: 1.2;
+  background-color: var(--white-text-color);
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* Данна властивість задається через универсальним се */
+/* h2 .container {
+  box-sizing: border-box;
+} */
+
+.logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 26px;
+  color: var(--accent-text-color-black);
+  margin-right: 93px;
+}
+.text-blue {
+  color: var(--accent-text-color-blue);
+}
+
+.navigation {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  background-color: var(--white-text-color);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 24px 15px 25px 15px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.contact-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.nav-item,
+.contact-item {
+  margin-right: 50px;
+}
+.nav-item:last-child,
+.nav-contact:last-child {
+  margin-right: 0;
+}
+.nav-link,
+.contact-item {
+  display: block;
+}
+
+.nav-link,
+.nav-contact {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  color: var(--primary-text-color);
+}
+
+.nav-contact {
+  color: var(--secondary-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:focus,
+.nav-contact:hover,
+.nav-contact:active,
+.nav-contact:focus {
+  color: var(--accent-text-color-blue);
+}
+
+.hero-container {
+  background-color: var(--background-color);
+  padding-right: 252px;
+  padding-left: 252px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-title {
+  color: var(--white-text-color);
+  padding-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+.button-service {
+  width: 200px;
+  height: 50px;
+  line-height: 2;
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color-blue);
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.features h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.features-list {
+  display: flex;
+  align-items: center;
+}
+.features-item {
+  flex-basis: calc(
+    (100% - (var(--indent) * (var(--items) - 1))) / var(--items)
+  );
+}
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+.features p {
+  padding-top: 26px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  line-height: 1.7;
+}
+.activities {
+  padding-left: 0;
+  padding-right: 0;
+  --items: 3;
+}
+.activities h2,
+.team h2 {
+  font-size: 36px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.activities-images {
+  display: flex;
+  align-items: center;
+}
+.activities-images > li {
+  flex-basis: ((100%-30px) / 4);
+  margin-right: 30px;
+}
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.staff {
+  display: flex;
+  align-items: center;
+}
+.staff-item:not(:last-child) {
+  margin-right: 30px;
+  flex-basis: calc(
+    (100% - (var(--indent) * (var(--items) - 1))) / var(--items)
+  );
+}
+
+.staff h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.staff p {
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+
+.staff-name {
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+}
+.footer {
+  background-color: var(--background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border: 1px red solid;
+}
+
+.footer .logo .text-white {
+  color: var(--white-text-color);
+}
+.logo {
+  padding: ;
+}
+
+.link-address,
+.link-contact {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white-text-color);
+}
+
+.link-contact {
+  opacity: 0.6;
+}
+.filter-menu {
+  width: 611px;
+
+  display: flex;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.menu-item {
+  margin-left: 8px;
+}
+.button-filter {
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: var(--button-background);
+  padding: 6px 22px 6px 22px;
+  border-radius: 4px;
+}
+
+.button-filter:hover,
+.button-filter:focus,
+.button-filter:active {
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color-blue);
+}
+.works {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.works-item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
+}
+
+.works-item:nth-child(3n) {
+  margin-right: -30px;
+}
+
+.works-title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--primary-text-color);
+  padding-bottom: 4px;
+}
+
+.works-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+.text-wrap {
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.filter.section {
+  padding-bottom: 94px;
+}
+.footer .logo {
+  padding-bottom: 20px;
+  display: inline-block;
+  margin-right: 0;
+}
