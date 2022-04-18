@@ -17,6 +17,7 @@ EEEEEE белый --*/
   --button-background: #f5f4fa;
   --border-color: #eee;
   --header-line-color: #ececec;
+
   --indent: 30px;
   --items: 4;
 }
@@ -32,11 +33,9 @@ EEEEEE белый --*/
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px red solid; */
+  outline: 1px red solid;
 }
-.navigation {
-  border-bottom: 1px solid var(--header-line-color);
-}
+
 ul {
   list-style: none;
 }
@@ -68,6 +67,7 @@ body {
   background-color: var(--white-text-color);
 }
 .section {
+  padding-bottom: 94px;
   padding-top: 94px;
 }
 /* Данна властивість задається через универсальним се */
@@ -80,35 +80,38 @@ body {
   font-style: normal;
   font-size: 26px;
   color: var(--accent-text-color-black);
-  margin-right: 93px;
 }
 .text-blue {
   color: var(--accent-text-color-blue);
 }
 
 .navigation {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 0 auto;
+  border-bottom: 1px solid var(--header-line-color);
   background-color: var(--white-text-color);
 }
-
 .logo-container {
   display: flex;
   align-items: center;
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+
+.site-nav {
+  margin-left: 93px;
 }
 .nav-list {
   display: flex;
   align-items: center;
 }
+.nav-item .current {
+  color: var(--accent-text-color-blue);
+}
 
 .nav-item,
 .contact-item {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   margin-right: 50px;
 }
+
 .nav-item:last-child,
 .contact-item:last-child {
   margin-right: 0px;
@@ -119,14 +122,15 @@ body {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
+  display: block;
 }
 
 .nav-contact {
   color: var(--secondary-text-color);
-  display: block;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
+  display: block;
 }
 .contact-list {
   display: flex;
@@ -189,6 +193,9 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.features {
+  padding-bottom: 0px;
+}
 
 .features-list {
   display: flex;
@@ -202,27 +209,21 @@ body {
   margin-right: 30px;
 }
 .features-title {
-  margin-top: 10px;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 700;
   color: var(--primary-text-color);
   line-height: 1.7;
   margin-bottom: 10px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
 }
 .features-text {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
   color: var(--secondary-text-color);
 }
 .activities {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0px;
+  padding-right: 0px;
   --items: 3;
 }
 .activities-title,
@@ -244,15 +245,14 @@ body {
 .activities-item:not(:last-child) {
   margin-right: 30px;
 }
-.activities-picture {
+.activities-picture,
+.staff-picture,
+.works-picture {
   display: block;
 }
-
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  background-color: var(--button-background);
 }
-
 .staff {
   display: flex;
   align-items: center;
@@ -265,11 +265,6 @@ body {
 }
 .staff-item {
   background-color: var(--white-text-color);
-}
-.staff-name {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .staff-nick {
@@ -285,8 +280,8 @@ body {
 }
 
 .staff-name {
-  padding-left: 30px;
-  padding-right: 30px;
+  text-align: center;
+  padding: 30px;
 }
 .footer {
   background-color: var(--background-color);
@@ -296,9 +291,6 @@ body {
 
 .footer .logo .text-white {
   color: var(--white-text-color);
-}
-.logo {
-  margin-bottom: 20px;
 }
 
 .link-address,
@@ -320,6 +312,10 @@ body {
 .menu-item {
   margin-left: 8px;
 }
+.menu-item:first-child {
+  margin-left: 0;
+}
+
 .button-filter {
   font-weight: 500;
   font-family: Roboto, sans-serif;
@@ -346,17 +342,18 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: -30px;
+  margin-right: -30px;
 }
 
 .works-item {
-  flex-basis: calc((100% - 30px * 2) / 3);
+  flex-basis: calc((100% - 30px * 3) / 3);
   margin-right: 30px;
   margin-top: 30px;
 }
-
+/* 
 .works-item:nth-child(3n) {
   margin-right: -30px;
-}
+} */
 
 .works-title {
   font-family: Roboto, sans-serif;
@@ -386,7 +383,7 @@ body {
   padding-bottom: 94px;
 }
 .footer .logo {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   display: inline-block;
   margin-right: 0;
 }
