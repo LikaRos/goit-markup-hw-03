@@ -23,11 +23,11 @@ EEEEEE белый --*/
 }
 
 /* Применить ко всему документу если нет  normalize
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
+ *,
+ *::before,
+ *::after {
+	box-sizing: border-box;
+ } */
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -72,8 +72,8 @@ body {
 }
 /* Данна властивість задається через универсальним се */
 /* h2 .container {
-  box-sizing: border-box;
-} */
+	box-sizing: border-box;
+ } */
 
 .logo {
   font-family: Raleway;
@@ -92,8 +92,6 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  padding-bottom: 32px;
-  padding-top: 32px;
 }
 
 .site-nav {
@@ -123,6 +121,8 @@ body {
   font-size: 14px;
   letter-spacing: 0.02em;
   display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .nav-contact {
@@ -131,7 +131,10 @@ body {
   font-size: 14px;
   letter-spacing: 0.02em;
   display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
+
 .contact-list {
   display: flex;
   align-items: center;
@@ -351,25 +354,24 @@ body {
   margin-top: 30px;
 }
 /* 
-.works-item:nth-child(3n) {
-  margin-right: -30px;
-} */
+ .works-item:nth-child(3n) {
+	margin-right: -30px;
+ } */
 
 .works-title {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 18px;
   color: var(--primary-text-color);
   margin-bottom: 4px;
+  font-weight: 700;
 }
 
 .works-text {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
   color: var(--secondary-text-color);
+  line-height: 2.7;
 }
+
 .text-wrap {
   padding-left: 24px;
   padding-right: 24px;
@@ -379,9 +381,11 @@ body {
   border-left: 1px var(--border-color) solid;
   border-right: 1px var(--border-color) solid;
 }
+
 .filter.section {
   padding-bottom: 94px;
 }
+
 .footer .logo {
   margin-bottom: 20px;
   display: inline-block;
